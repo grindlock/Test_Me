@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_question3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#49C2CF"
+    tools:context="com.example.sergio.quizmetestgui.question3">
+
+
+    <TextView
+        android:id="@+id/xp"
+        android:text="XP:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/score3"
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/xp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:src="@drawable/ques22"
+        android:scaleType="centerCrop"
+        android:id="@+id/question"
+        android:layout_width="250dp"
+        android:layout_height="180dp"
+        android:paddingLeft="70dp"
+        android:paddingRight="70dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="15dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/roundcorner"
+        android:layout_below="@+id/mytime3" />
+
+    <TextView
+        android:id="@+id/problem"
+        android:text="What is the output?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/question"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textAllCaps="true"
+        android:textStyle="bold"/>
+
+
+    <Button
+        android:id="@+id/button9"
+        android:text="Fizz
+ Buzz"
+        android:textColor="@android:color/white"
+        android:background="@drawable/roundcorner"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/problem"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/button10"
+        android:text="Fizz"
+        android:textColor="@android:color/white"
+        android:background="@drawable/roundcorner"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button9"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/button11"
+        android:text="Buzz"
+        android:textColor="@android:color/white"
+        android:background="@drawable/roundcorner"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button10"
+        android:layout_centerHorizontal="true"
+        android:onClick="update"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/button12"
+        android:text="FizzBuzz"
+        android:textColor="@android:color/white"
+        android:background="@drawable/roundcorner"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button11"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/score3"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/mytime3" />
+
+
+</RelativeLayout>

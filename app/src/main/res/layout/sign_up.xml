@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <EditText
+        android:layout_height="48dp"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/fname"
+        android:layout_width="185dp"
+        android:hint="First Name"
+        android:background="@drawable/rounded_sides"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:layout_height="48dp"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/lname"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="0dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/fname"
+        android:hint="Last Name"
+        android:background="@drawable/rounded_sides"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:text="Username already taken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:textSize="18sp"
+        android:textColor="@color/errorColor"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/emailCreate"
+        app:layout_constraintLeft_toLeftOf="@+id/emailCreate"
+        app:layout_constraintRight_toRightOf="@+id/emailCreate"
+        android:visibility="invisible" />
+
+    <TextView
+        android:text="Please enter a valid email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/lname"
+        android:textSize="18sp"
+        android:textColor="@color/errorColor"
+        app:layout_constraintLeft_toLeftOf="@+id/fname"
+        app:layout_constraintRight_toRightOf="@+id/lname"
+        android:visibility="invisible" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/emailCreate"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:hint="School Email"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        android:background="@drawable/rounded_sides"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/usernameCreate"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:hint="Username"
+        android:background="@drawable/rounded_sides"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView6"
+        android:textSize="18sp"
+        android:textColor="@color/errorColor"
+        app:layout_constraintTop_toBottomOf="@+id/usernameCreate"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="8dp"
+        android:visibility="invisible" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/passwordCreate"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        android:hint="Password"
+        android:background="@drawable/rounded_sides"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/usernameCreate"
+        app:layout_constraintRight_toRightOf="@+id/usernameCreate" />
+
+    <Button
+        android:text="@string/register"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:id="@+id/button2"
+        android:background="@drawable/rounded_sides"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="28sp"
+        android:onClick="registerUser"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="32dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline2"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5078125"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <RadioGroup
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:id="@+id/radioGroup"
+        app:layout_constraintRight_toLeftOf="@+id/guideline2"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/passwordCreate">
+
+        <RadioButton
+            android:text="Professor"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/professor"
+            android:gravity="center_vertical"
+            android:textSize="18sp"
+            android:textAlignment="viewStart" />
+
+        <RadioButton
+            android:text="Student"
+            android:id="@+id/student"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textSize="18sp" />
+
+    </RadioGroup>
+
+    <ImageView
+        app:srcCompat="@drawable/logo"
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="32dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        android:layout_marginBottom="8dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline3"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp"
+        app:layout_constraintGuide_percent="0.3019727" />
+
+    <TextView
+        android:text="Create Account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView7"
+        app:layout_constraintRight_toLeftOf="@+id/guideline2"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        android:textSize="30sp" />
+
+</android.support.constraint.ConstraintLayout>

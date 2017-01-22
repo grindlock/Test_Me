@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_question4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#49C2CF"
+    tools:context="com.example.sergio.quizmetestgui.question4">
+
+
+    <TextView
+        android:id="@+id/xp"
+        android:text="XP:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/score4"
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/xp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:src="@drawable/ques44"
+        android:id="@+id/question"
+        android:layout_width="340dp"
+        android:layout_height="130dp"
+        android:paddingLeft="70dp"
+        android:paddingRight="70dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/roundcorner"
+        android:layout_marginTop="80dp"/>
+
+    <TextView
+        android:id="@+id/problem"
+        android:text="What does || mean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/question"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textAllCaps="true"
+        android:textStyle="bold"/>
+
+
+    <Button
+        android:id="@+id/button13"
+        android:text="And"
+        android:textColor="@android:color/white"
+        android:background="@drawable/roundcorner"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/problem"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/button14"
+        android:text="Exclusively Or"
+        android:textColor="@android:color/white"
+        android:background="@drawable/roundcorner"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button13"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/button15"
+        android:text="Because"
+        android:textColor="@android:color/white"
+        android:background="@drawable/roundcorner"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button14"
+        android:layout_centerHorizontal="true"
+        android:onClick="update"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/button16"
+        android:text="Or"
+        android:textColor="@android:color/white"
+        android:background="@drawable/roundcorner"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button15"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/score4"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/mytime4" />
+
+
+</RelativeLayout>
